@@ -1,0 +1,10 @@
+.searchBarSection{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.searchBarSectionInput{
+    width: 100%;
+    padding: 1.5rem 3rem;
+    font-size: 2rem;
+}
