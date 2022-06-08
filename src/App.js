@@ -1,16 +1,24 @@
-import {React, Component} from "react";
+import React from "react";
 import "./App.css"
 import SearchBar from "./SearchBar";
 import ImgCard from "./ImgCard";
 
-class App extends Component {
-    state = { name: "hallo"}; 
+class App extends React.Component {
+    state = { name: "", imgSrc: "", number: "", list: []}; 
+
+    onSearch = (searchTerm) =>{
+        console.log("hallo")
+    }
+
+    onSubmit = () =>{
+        this.props.onSubmit(this.state.searchTerm)
+    }
 
     render() { 
         return(
             <article>
-                <SearchBar/>   
-                <ImgCard name={this.state.name}/>
+                <SearchBar onSubmit = {this.onSubmit} onSearch={this.onSearch} />   
+                <ImgCard name={this.state.name} number={this.state.number} imgSrc={this.state.imgSrc} />
             </article>
         );
     }

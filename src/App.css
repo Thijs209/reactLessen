@@ -13,3 +13,8 @@ body{
     font-family: sans-serif;
     line-height: 1.55;
 }
+
+article{
+    width: 70%;
+    margin: 0 auto;
+}
